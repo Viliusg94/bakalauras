@@ -17,35 +17,7 @@
         <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
         <script src="js/wow.min.js"></script>
         <!--animacija css-->
-        <script>
-            {#jmiasdjfisdj#}
-            {#jmiasdjfisdj#}
-            {#jmiasdjfisdj#}
-            {#jmiasdjfisdj#}
-            {#jmiasdjfisdj#}
-            {#jmiasdjfisdj#}
-            new WOW().init();
-            jQuery(document).ready(function($) {
-                $(".scroll").click(function(event){
-                    event.preventDefault();
-                    $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-                });
 
-                $(".swipebox").swipebox();
-                addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
-
-                $("#owl-demo").owlCarousel({
-                    items : 1,
-                    lazyLoad : true,
-                    autoPlay : true,
-                    navigation : false,
-                    navigationText :  false,
-                    pagination : true,
-                });
-
-
-            });
-        </script>
         <!--scriptas-->
         <script type="text/javascript" src="js/move-top.js"></script>
         <script type="text/javascript" src="js/easing.js"></script>
@@ -56,99 +28,93 @@
 {% endblock %}
 
 {% block body %}
-
-
-<div class="banner">
-    <div class="container">
-        <div class="header">
-            <div class="logo wow fadeInLeft" data-wow-delay="0.5s">
-                <a href="index.html"><img src="images/logo2.png" alt=""/></a>
+    <div class="banner">
+        <div class="container">
+            <div class="header">
+                <div class="logo wow fadeInLeft" data-wow-delay="0.5s">
+                    <a href="index.html"><img src="images/logo2.png" alt=""/></a>
+                </div>
+                <div class="top-menu">
+                    <span class="menu"> </span>
+                    <ul>
+                        <li><a class="scroll" href="#pagrindins">PAGRINDINS</a></li>
+                        <li><a class="scroll" href="#apiemus">APIE MUS</a></li>
+                        <li><a class="scroll" href="#kainos">KAINININKAS</a></li>
+                        <li><a class="scroll" href="#galerija">GALERIJA</a></li>
+                        <li><a class="scroll" href="#kontaktai">KONTAKTAI</a></li>
+                        <li><a class="scroll" href="#zemelapis">ŽEMĖLAPIS</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
             </div>
-            <div class="top-menu">
-                <span class="menu"> </span>
-                <ul>
-                    <li><a class="scroll" href="#pagrindins">PAGRINDINS</a></li>
-                    <li><a class="scroll" href="#apiemus">APIE MUS</a></li>
-                    <li><a class="scroll" href="#kainos">KAINININKAS</a></li>
-                    <li><a class="scroll" href="#galerija">GALERIJA</a></li>
-                    <li><a class="scroll" href="#kontaktai">KONTAKTAI</a></li>
-                    <li><a class="scroll" href="#zemelapis">ŽEMĖLAPIS</a></li>
-                </ul>
+
+            <div id="Pagrindinis" class="banner-text wow fadeInUp" data-wow-delay="0.5s">
+                <h1>Profesionalios <span> pervežimo </span> <h1>paslaugos</h1></h1>
+
             </div>
-            <div class="clearfix"> </div>
-        </div>
-        <!-- script-for-menu -->
-
-        <div id="Pagrindinis" class="banner-text wow fadeInUp" data-wow-delay="0.5s">
-            <h1>Profesionalios <span> pervežimo </span> <h1>paslaugos</h1></h1>
-
         </div>
     </div>
-</div>
-<div id="apiemus" class="apiemus">
-    <div class="container">
-        <div class="brief-text text-center">
-            <h3>APIE MUS</h3>
-            <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
-                <img src="images/browse.jpg" alt=""/>
+    <div id="apiemus" class="apiemus">
+        <div class="container">
+            <div class="brief-text text-center">
+                <h3>APIE MUS</h3>
+                <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
+                    <img src="images/browse.jpg" alt=""/>
+                    <div class="brief-grid">
+                        <div class="brief-grid-text">
+                            <h3>Nuo durų iki durų</h3>
+                            <p>Mūsų įmonė užsiima pervežimu tarp Lietuvos Švedijos bei Norvegijos nuo durų iki durų. </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 brief-grids wow fadeInRight" data-wow-delay="0.5s">
+                <img src="images/browse2.jpg" alt=""/>
                 <div class="brief-grid">
                     <div class="brief-grid-text">
-                        <h3>Nuo durų iki durų</h3>
-                        <p>Mūsų įmonė užsiima pervežimu tarp Lietuvos Švedijos bei Norvegijos nuo durų iki durų. </p>
+                        <h3>Atvežame prekių iš Lietuvos</h3>
+                        <p>Teikiame apipirkimo bei autodetalių pristatymo paslaugas.</p>
                     </div>
 
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 brief-grids wow fadeInRight" data-wow-delay="0.5s">
-            <img src="images/browse2.jpg" alt=""/>
-            <div class="brief-grid">
-                <div class="brief-grid-text">
-                    <h3>Atvežame prekių iš Lietuvos</h3>
-                    <p>Teikiame apipirkimo bei autodetalių pristatymo paslaugas.</p>
-                </div>
-
-            </div>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-</div>
-<!---->
-<!---->
-
-<!---->
-<div id="kainos" class="container">
-    <div class="container">
-        <div class="Kainininkas-text text-center">
-            <h3>PASLAUGŲ KAINOS</h3>
-
-        </div>
-        <div class="kainos-section">
-            <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
-                <img src="images/kainynas.jpg" alt=""/>
-            </div>
+            <div class="clearfix"> </div>
         </div>
     </div>
-</div>
 
+    <div id="kainos" class="container">
+        <div class="container">
+            <div class="Kainininkas-text text-center">
+                <h3>PASLAUGŲ KAINOS</h3>
 
-<div id="kontaktai" class="container">
-    <div class="container">
-        <div class="brief-text text-center">
-
-            <div class="brief-grid">
-                <div class="brief-grid-text">
-                    <h3>KONTAKTAI</h3>
-                    <p> Tel: +370 688 34343</p>
-                    <p>el paštas: skandinavijoskurjeris@gmail.com</p>
-                    <p>https://facebook.com/skandinavijoskurjeris</p>
-
+            </div>
+            <div class="kainos-section">
+                <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
+                    <img src="images/kainynas.jpg" alt=""/>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!---->
+
+
+    <div id="kontaktai" class="container">
+        <div class="container">
+            <div class="brief-text text-center">
+
+                <div class="brief-grid">
+                    <div class="brief-grid-text">
+                        <h3>KONTAKTAI</h3>
+                        <p> Tel: +370 688 34343</p>
+                        <p>el paštas: skandinavijoskurjeris@gmail.com</p>
+                        <p>https://facebook.com/skandinavijoskurjeris</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
 <!--
 planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau greitu metu turėtų atsirasti
 <div class="video">
@@ -171,8 +137,6 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
         <div class="screen-text text-center">
             <h3>GALERIJA</h3>
         </div>
-
-
 
         <div id="owl-demo" class="owl-carousel">
             <div class="item text-center guide-sliders">
@@ -252,15 +216,10 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
 
         <br>
 
-
         <h1>Comment creation</h1>
-
-
 
         {{ form_start(form) }}
         {{ form_errors(form) }}
-
-
 
         {# The two following syntaxes are equivalent #}
         <div class="form-group">
@@ -338,33 +297,59 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
         <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 
-        <!---->
-        <script type="text/javascript">
-            $(document).ready(function() {
-
-                var defaults = {
-                    containerID: 'toTop', // fading element id
-                    containerHoverID: 'toTopHover', // fading element hover id
-                    scrollSpeed: 1200,
-                    easingType: 'linear'
-                };
-
-                $().UItoTop({ easingType: 'easeOutQuart' });
-            });
-        </script>
-
-
-        <script>
-            $("span.menu").click(function(){
-                $(".top-menu ul").slideToggle("slow" , function(){
-                });
-            });
-        </script>
-
-
-        <script src="js/owl.carousel.js"></script>
 
 
 
 
 {% endblock %}
+
+
+
+{% block javascripts %}
+    <script>
+        jQuery(document).ready(function($) {
+
+            new WOW().init();
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+            });
+
+            $(".swipebox").swipebox();
+
+            $("#owl-demo").owlCarousel({
+                items : 1,
+                lazyLoad : true,
+                autoPlay : true,
+                navigation : false,
+                navigationText :  false,
+                pagination : true,
+            });
+
+
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+
+    <!---->
+
+
+    <script>
+        $("span.menu").click(function(){
+            $(".top-menu ul").slideToggle("slow" , function(){
+            });
+        });
+    </script>
+
+
+    <script src="js/owl.carousel.js"></script>
+
+{% endblock %}
+
