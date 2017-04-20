@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="338fd34d-8454-4f4d-95d3-3ae705a81dd5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/vganimacijos.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/comment/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/comment/index.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,12 +23,24 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/comment/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#5;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#5;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vganimacijos.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/vganimacijos.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="29" column="3" lean-forward="false" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#47#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -45,6 +57,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -70,6 +89,7 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Form/CommentType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/CommentController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/vganimacijos.js" />
         <option value="$PROJECT_DIR$/app/Resources/views/comment/index.html.twig" />
       </list>
     </option>
@@ -479,7 +499,7 @@
       <updated>1492685785618</updated>
       <workItem from="1492685787195" duration="172000" />
       <workItem from="1492686027342" duration="1591000" />
-      <workItem from="1492689991261" duration="11651000" />
+      <workItem from="1492689991261" duration="12150000" />
     </task>
     <task id="LOCAL-00001" summary="miau">
       <created>1492690329560</created>
@@ -523,11 +543,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492698259455</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refresho priezastis rasta">
+      <created>1492708145234</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1492708145234</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13414000" />
+    <option name="totallyTimeSpent" value="13913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -591,7 +618,8 @@
     <MESSAGE value="clean code" />
     <MESSAGE value="Veikia komentarai ir froma grazi :D" />
     <MESSAGE value="pradeta tvarkyti betvarke" />
-    <option name="LAST_COMMIT_MESSAGE" value="pradeta tvarkyti betvarke" />
+    <MESSAGE value="refresho priezastis rasta" />
+    <option name="LAST_COMMIT_MESSAGE" value="refresho priezastis rasta" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -792,10 +820,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/vganimacijos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="29" column="3" lean-forward="false" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/comment/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#5;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#5;n#!!top" expanded="true" />
