@@ -262,12 +262,45 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
 
 
 
+
+
+
+
+
+
+        <h1>Comment creation</h1>
+
+
+
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+
+
+        {# The two following syntaxes are equivalent #}
+        <div class="form-group">
+            {{ form_label(form.name, 'Jūsų vardas') }}
+            {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.text, 'Atsiliepimas') }}
+            {{ form_widget(form.text, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+
+
+        <input type="submit" value="Create" />
+
+        {{ form_end(form) }}
+
+
         <h1>Comments list</h1>
+
 
         <table>
             <thead>
             <tr>
-                <th>Id</th>
+
                 <th>Name</th>
                 <th>Text</th>
                 <th>Created</th>
@@ -277,15 +310,15 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
             <tbody>
             {% for comment in comments %}
                 <tr>
-                    <td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>
+                    {#<td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>#}
                     <td>{{ comment.name }}</td>
                     <td>{{ comment.text }}</td>
-                    <td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    {#<td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>#}
                     <td>
                         <ul>
-                            <li>
-                                <a href="{{ path('_show', { 'id': comment.id }) }}">show</a>
-                            </li>
+                            {#<li>#}
+                                {#<a href="{{ path('_show', { 'id': comment.id }) }}">show</a>#}
+                            {#</li>#}
                             <li>
                                 <a href="{{ path('_edit', { 'id': comment.id }) }}">edit</a>
                             </li>

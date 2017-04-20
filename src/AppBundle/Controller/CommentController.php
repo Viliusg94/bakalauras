@@ -18,16 +18,31 @@ class CommentController extends Controller
      * Lists all comment entities.
      *
      * @Route("/", name="_index")
-     * @Method("GET")
+     * @Method({"GET", "POST"})
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        $comment = new Comment();
+
+        $form = $this->createForm('AppBundle\Form\CommentType', $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($comment);
+            $em->flush();
+
+            return $this->redirectToRoute('_index');
+        }
+
         $em = $this->getDoctrine()->getManager();
 
         $comments = $em->getRepository('AppBundle:Comment')->findAll();
 
         return $this->render('comment/index.html.twig', array(
             'comments' => $comments,
+            'comment' => $comment,
+            'form' => $form->createView(),
         ));
     }
 
