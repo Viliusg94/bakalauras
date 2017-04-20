@@ -1,0 +1,350 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+        <title>Skandinavijos Kurjeris</title>
+        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <script src="js/jquery.min.js"></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Trip  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!--sriftas-->
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Raleway:400,800,300,100,500,700,600,900' rel='stylesheet' type='text/css'>
+        <!--animacija css-->
+        <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+        <script src="js/wow.min.js"></script>
+        <!--animacija css-->
+        <script>
+            new WOW().init();
+        </script>
+        <!--scriptas-->
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <!--/scriptas-->
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+                });
+            });
+        </script>
+        <link rel="stylesheet" href="css/swipebox.css">
+        <script src="js/jquery.swipebox.min.js"></script>
+        <script type="text/javascript">
+            jQuery(function($) {
+                $(".swipebox").swipebox();
+            });
+        </script>
+{% endblock %}
+
+{% block body %}
+
+
+<div class="banner">
+    <div class="container">
+        <div class="header">
+            <div class="logo wow fadeInLeft" data-wow-delay="0.5s">
+                <a href="index.html"><img src="images/logo2.png" alt=""/></a>
+            </div>
+            <div class="top-menu">
+                <span class="menu"> </span>
+                <ul>
+                    <li><a class="scroll" href="#pagrindins">PAGRINDINS</a></li>
+                    <li><a class="scroll" href="#apiemus">APIE MUS</a></li>
+                    <li><a class="scroll" href="#kainos">KAINININKAS</a></li>
+                    <li><a class="scroll" href="#galerija">GALERIJA</a></li>
+                    <li><a class="scroll" href="#kontaktai">KONTAKTAI</a></li>
+                    <li><a class="scroll" href="#zemelapis">ŽEMĖLAPIS</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <!-- script-for-menu -->
+
+        <div id="Pagrindinis" class="banner-text wow fadeInUp" data-wow-delay="0.5s">
+            <h1>Profesionalios <span> pervežimo </span> <h1>paslaugos</h1></h1>
+
+        </div>
+    </div>
+</div>
+<div id="apiemus" class="apiemus">
+    <div class="container">
+        <div class="brief-text text-center">
+            <h3>APIE MUS</h3>
+            <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
+                <img src="images/browse.jpg" alt=""/>
+                <div class="brief-grid">
+                    <div class="brief-grid-text">
+                        <h3>Nuo durų iki durų</h3>
+                        <p>Mūsų įmonė užsiima pervežimu tarp Lietuvos Švedijos bei Norvegijos nuo durų iki durų. </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 brief-grids wow fadeInRight" data-wow-delay="0.5s">
+            <img src="images/browse2.jpg" alt=""/>
+            <div class="brief-grid">
+                <div class="brief-grid-text">
+                    <h3>Atvežame prekių iš Lietuvos</h3>
+                    <p>Teikiame apipirkimo bei autodetalių pristatymo paslaugas.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!---->
+<!---->
+
+<!---->
+<div id="kainos" class="container">
+    <div class="container">
+        <div class="Kainininkas-text text-center">
+            <h3>PASLAUGŲ KAINOS</h3>
+
+        </div>
+        <div class="kainos-section">
+            <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
+                <img src="images/kainynas.jpg" alt=""/>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="kontaktai" class="container">
+    <div class="container">
+        <div class="brief-text text-center">
+
+            <div class="brief-grid">
+                <div class="brief-grid-text">
+                    <h3>KONTAKTAI</h3>
+                    <p> Tel: +370 688 34343</p>
+                    <p>el paštas: skandinavijoskurjeris@gmail.com</p>
+                    <p>https://facebook.com/skandinavijoskurjeris</p>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+</div>
+<!---->
+<!--
+planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau greitu metu turėtų atsirasti
+<div class="video">
+	 <div class="container">
+		 <div class="video-text text-center">
+			 <h3>MŪSŲ VIDEO</h3>
+
+		 </div>
+		 <div class="video-play ">
+			 <div class="playing">
+				 <iframe width="500"height="281"src="https://www.youtube.com/reklaminis video"frameborder="0"allowfullscreen> </iframe>
+			 </div>
+		 </div>
+	 </div>
+</div>
+<!---->
+
+<div id="galerija" class="screenshots">
+    <div class="container">
+        <div class="screen-text text-center">
+            <h3>GALERIJA</h3>
+        </div>
+
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <script src="js/owl.carousel.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#owl-demo").owlCarousel({
+                    items : 1,
+                    lazyLoad : true,
+                    autoPlay : true,
+                    navigation : false,
+                    navigationText :  false,
+                    pagination : true,
+                });
+            });
+        </script>
+
+        <div id="owl-demo" class="owl-carousel">
+            <div class="item text-center guide-sliders">
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="images/sc1.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc1.JPG"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="images/sc2.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc2.JPG"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="images/sc3.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc3.JPG"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item text-center guide-sliders">
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="images/sc4.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc4.JPG"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="images/sc5.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc5.jpg"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="images/sc1.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc1.JPG"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item text-center guide-sliders">
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="images/sc5.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc5.JPG"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="images/sc4.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc4.JPG"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="images/sc2.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc2.JPG"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div id="zemelapis" class="container">
+    <div class="container">
+        <div class="screen-text text-center">
+            <h3>ŽEMĖLAPIS</h3>
+        </div>
+
+        <div class="ŽEMĖLAPIS">
+            <iframe   width="100%" height="500" align="center" src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d4054590.3043713947!2d3.8888495591625714!3d60.25055038847491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e0!4m5!1s0x4616da471047fb4b%3A0xe82562ee3bc08fea!2s%C3%85lesund%2C+Norvegija!3m2!1d62.4722284!2d6.149482!4m5!1s0x463a3549dd29f795%3A0xad7aeb21b80a9259!2sStavangeris%2C+Norvegija!3m2!1d58.9699756!2d5.7331072999999995!4m5!1s0x46416e61f267f039%3A0x7e92605fd3231e9a!2sOslas%2C+Norvegija!3m2!1d59.913868799999996!2d10.7522454!4m5!1s0x4616da471047fb4b%3A0xe82562ee3bc08fea!2s%C3%85lesund%2C+Norvegija!3m2!1d62.4722284!2d6.149482!5e0!3m2!1slt!2slt!4v1492644214371" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <br>
+
+        <div class="footer">
+            <div class="container">
+                <div class="ftr-logo">
+                    <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"><img src="images/logo2.png" alt=""/></a>
+                </div>
+                <div class="copy-right wow bounceInUp" data-wow-delay="0.5s">
+                    <p>Copyright &#169; 2015 Skandinavijos Kurjeris . All Rights Reserved.</p>
+                    <p>Dizainas: Vilius Gražulis</p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+        <!---->
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                var defaults = {
+                    containerID: 'toTop', // fading element id
+                    containerHoverID: 'toTopHover', // fading element hover id
+                    scrollSpeed: 1200,
+                    easingType: 'linear'
+                };
+
+                $().UItoTop({ easingType: 'easeOutQuart' });
+            });
+        </script>
+
+
+        <script>
+            $("span.menu").click(function(){
+                $(".top-menu ul").slideToggle("slow" , function(){
+                });
+            });
+        </script>
+
+
+
+
+
+
+
+        <h1>Comments list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Text</th>
+                <th>Created</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for comment in comments %}
+            <tr>
+                <td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>
+                <td>{{ comment.name }}</td>
+                <td>{{ comment.text }}</td>
+                <td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('_show', { 'id': comment.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('_edit', { 'id': comment.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('_new') }}">Create a new comment</a>
+        </li>
+    </ul>
+{% endblock %}
