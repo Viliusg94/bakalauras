@@ -6,10 +6,11 @@
         <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="keywords" content="Trip  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <meta name="keywords" content="Skandinavijos kurjeris, pervezimai, svedija, norvegija" />
+
         <!--sriftas-->
+        <link href="css/owl.carousel.css" rel="stylesheet">
+
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Raleway:400,800,300,100,500,700,600,900' rel='stylesheet' type='text/css'>
         <!--animacija css-->
@@ -17,27 +18,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <script src="js/wow.min.js"></script>
         <!--animacija css-->
         <script>
+            {#jmiasdjfisdj#}
+            {#jmiasdjfisdj#}
+            {#jmiasdjfisdj#}
+            {#jmiasdjfisdj#}
+            {#jmiasdjfisdj#}
+            {#jmiasdjfisdj#}
             new WOW().init();
-        </script>
-        <!--scriptas-->
-        <script type="text/javascript" src="js/move-top.js"></script>
-        <script type="text/javascript" src="js/easing.js"></script>
-        <!--/scriptas-->
-        <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $(".scroll").click(function(event){
                     event.preventDefault();
                     $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
                 });
+
+                $(".swipebox").swipebox();
+                addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+
+                $("#owl-demo").owlCarousel({
+                    items : 1,
+                    lazyLoad : true,
+                    autoPlay : true,
+                    navigation : false,
+                    navigationText :  false,
+                    pagination : true,
+                });
+
+
             });
         </script>
+        <!--scriptas-->
+        <script type="text/javascript" src="js/move-top.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+
         <link rel="stylesheet" href="css/swipebox.css">
         <script src="js/jquery.swipebox.min.js"></script>
-        <script type="text/javascript">
-            jQuery(function($) {
-                $(".swipebox").swipebox();
-            });
-        </script>
+
 {% endblock %}
 
 {% block body %}
@@ -129,16 +144,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <p>https://facebook.com/skandinavijoskurjeris</p>
 
                 </div>
-
-
             </div>
-
-
-
         </div>
-
-
-
     </div>
 </div>
 <!---->
@@ -165,20 +172,7 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
             <h3>GALERIJA</h3>
         </div>
 
-        <link href="css/owl.carousel.css" rel="stylesheet">
-        <script src="js/owl.carousel.js"></script>
-        <script>
-            $(document).ready(function() {
-                $("#owl-demo").owlCarousel({
-                    items : 1,
-                    lazyLoad : true,
-                    autoPlay : true,
-                    navigation : false,
-                    navigationText :  false,
-                    pagination : true,
-                });
-            });
-        </script>
+
 
         <div id="owl-demo" class="owl-carousel">
             <div class="item text-center guide-sliders">
@@ -246,8 +240,6 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
     </div>
 </div>
 
-
-
 <div id="zemelapis" class="container">
     <div class="container">
         <div class="screen-text text-center">
@@ -261,13 +253,38 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
         <br>
 
 
+        <h1>Comment creation</h1>
+
+
+
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+
+
+        {# The two following syntaxes are equivalent #}
+        <div class="form-group">
+            {{ form_label(form.name, 'Jūsų vardas') }}
+            {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.text, 'Atsiliepimas') }}
+            {{ form_widget(form.text, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+
+
+        <input type="submit" value="Komentuoti" />
+
+        {{ form_end(form) }}
+
 
         <h1>Comments list</h1>
 
         <table>
             <thead>
             <tr>
-                <th>Id</th>
+
                 <th>Name</th>
                 <th>Text</th>
                 <th>Created</th>
@@ -277,15 +294,15 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
             <tbody>
             {% for comment in comments %}
                 <tr>
-                    <td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>
+                    {#<td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>#}
                     <td>{{ comment.name }}</td>
                     <td>{{ comment.text }}</td>
-                    <td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    {#<td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>#}
                     <td>
                         <ul>
-                            <li>
-                                <a href="{{ path('_show', { 'id': comment.id }) }}">show</a>
-                            </li>
+                            {#<li>#}
+                                {#<a href="{{ path('_show', { 'id': comment.id }) }}">show</a>#}
+                            {#</li>#}
                             <li>
                                 <a href="{{ path('_edit', { 'id': comment.id }) }}">edit</a>
                             </li>
@@ -303,8 +320,6 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
         </ul>
 
         <br>
-{#test#}
-
 
         <div class="footer">
             <div class="container">
@@ -318,8 +333,6 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
 
             </div>
         </div>
-
-
 
 
         <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
@@ -349,6 +362,7 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
         </script>
 
 
+        <script src="js/owl.carousel.js"></script>
 
 
 
