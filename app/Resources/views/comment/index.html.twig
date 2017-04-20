@@ -260,6 +260,52 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
 
         <br>
 
+
+
+        <h1>Comments list</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Text</th>
+                <th>Created</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for comment in comments %}
+                <tr>
+                    <td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>
+                    <td>{{ comment.name }}</td>
+                    <td>{{ comment.text }}</td>
+                    <td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('_show', { 'id': comment.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('_edit', { 'id': comment.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <ul>
+            <li>
+                <a href="{{ path('_new') }}">Create a new comment</a>
+            </li>
+        </ul>
+
+        <br>
+
+
+
         <div class="footer">
             <div class="container">
                 <div class="ftr-logo">
@@ -307,44 +353,4 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
 
 
 
-
-        <h1>Comments list</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Text</th>
-                <th>Created</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for comment in comments %}
-            <tr>
-                <td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>
-                <td>{{ comment.name }}</td>
-                <td>{{ comment.text }}</td>
-                <td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('_show', { 'id': comment.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('_edit', { 'id': comment.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('_new') }}">Create a new comment</a>
-        </li>
-    </ul>
 {% endblock %}
