@@ -343,9 +343,9 @@ font-size:1.3em;
 /*Pricing table and price blocks*/
  h1 {
 	text-align: center;
-  margin: 1em 0 1em;
-  font-size: 3em;
-  color: #fff;
+	margin: 1em 0 1em;
+	font-size: 3em;
+	color: #2e3e93;
 }
 .price-head h3 {
 	color: #404042;
@@ -2715,3 +2715,5 @@ color: #7f7f7f;
 	  padding: 0;
 	}
 }
+
+

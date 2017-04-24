@@ -3,7 +3,7 @@
         <title>Skandinavijos Kurjeris</title>
         <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
         <script src="js/jquery.min.js"></script>
-        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        {#<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />#}
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Skandinavijos kurjeris, pervezimai, svedija, norvegija" />
@@ -34,17 +34,12 @@
                 <div class="logo wow fadeInLeft" data-wow-delay="0.5s">
                     <a href="index.html"><img src="images/logo2.png" alt=""/></a>
                 </div>
-                <div class="top-menu">
-                    <span class="menu"> </span>
-                    <ul>
-                        <li><a class="scroll" href="#pagrindins">PAGRINDINS</a></li>
-                        <li><a class="scroll" href="#apiemus">APIE MUS</a></li>
-                        <li><a class="scroll" href="#kainos">KAINININKAS</a></li>
-                        <li><a class="scroll" href="#galerija">GALERIJA</a></li>
-                        <li><a class="scroll" href="#kontaktai">KONTAKTAI</a></li>
-                        <li><a class="scroll" href="#zemelapis">ŽEMĖLAPIS</a></li>
-                    </ul>
-                </div>
+                {#<div class="top-menu">#}
+                    {#<span class="menu"> </span>#}
+                    {#<ul>#}
+
+                    {#</ul>#}
+                {#</div>#}
                 <div class="clearfix"> </div>
             </div>
 
@@ -53,10 +48,11 @@
             </div>
         </div>
     </div>
+{% include ':include:sidebar.html.twig' %}
     <div id="apiemus" class="apiemus">
         <div class="container">
             <div class="brief-text text-center">
-                <h3>APIE MUS</h3>
+                <h1>APIE MUS</h1>
                 <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
                     <img src="images/browse.jpg" alt=""/>
                     <div class="brief-grid">
@@ -215,8 +211,7 @@
 
         <br>
 
-        <h1>Comment creation</h1>
-
+        <h1 id="komentarai">Comment creation</h1>
         {{ form_start(form) }}
         {{ form_errors(form) }}
 
@@ -226,7 +221,7 @@
             {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
         </div>
 
-        <div class="form-group">
+        <div  class="container">
             {{ form_label(form.text, 'Atsiliepimas') }}
             {{ form_widget(form.text, { 'attr': {'class': 'form-control'} }) }}
         </div>
@@ -305,6 +300,7 @@
 
 
 {% block javascripts %}
+    {{ parent() }}
     <script src="js/vganimacijos.js"></script>
 
     <!---->
@@ -322,3 +318,8 @@
 
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset('sidebar/style.css') }}">
+{% endblock %}
