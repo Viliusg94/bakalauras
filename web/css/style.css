@@ -58,13 +58,7 @@ color:#0199e6;
 .banner-text{
 text-align:center;
 }
-.banner-text h1{
-font-size:4em;
-color:#00CFFF;
-font-weight:bold;
-margin-bottom:0.5em;
-font-family: 'Raleway', sans-serif;
-}
+.banner-text h1{font-size:4em;color: #8efe01;font-weight:bold;margin-bottom:0.5em;font-family: 'Raleway', sans-serif;}
 .banner-text h1 span{
   color: #00CFFF;
   font-weight: 700;
