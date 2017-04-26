@@ -1,5 +1,5 @@
-var $body   = $(document.body);
-var navHeight = $('.navbar').outerHeight(true) + 10;
+var $body   = $('#apiemus');
+// var navHeight = $('.navbar').outerHeight(true) + 10;
 
 $('#sidebar').affix({
       offset: {
@@ -13,3 +13,4 @@ $body.scrollspy({
 	target: '#leftCol',
 	offset: navHeight
 });
+

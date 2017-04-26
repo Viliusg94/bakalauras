@@ -11,6 +11,7 @@ body {
 #masthead h1 {
 	font-size: 55px;
 	line-height: 1;
+
 }
 
 #masthead .well {
@@ -33,7 +34,7 @@ body {
 	background-color:#111155;
     color:#fff;
 }
-  
+
 .navbar-bright a, #masthead a, #masthead .lead {
   	color:#aaaacc;
 }
@@ -52,7 +53,7 @@ body {
   	margin-top:30px;
   	width:115px;
   }
-  
+
   #sidebar.affix-bottom {
     position: relative;
   }
@@ -80,6 +81,11 @@ body {
 }
 
 
+
+
+
+
+
 #leftCol ul li:nth-child(odd){
 
     background-color:#faf;
@@ -89,4 +95,22 @@ body {
 #leftCol ul li:nth-child(even){
   padding-right: 0;
   background-color:#abc;
+
 }
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+	background-color: #111155;
+	color: white;
+}
+
