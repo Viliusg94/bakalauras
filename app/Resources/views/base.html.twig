@@ -7,17 +7,24 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
             <link rel="stylesheet" href="{{ asset('sidebar/style.css') }}">
             <link rel="stylesheet" href="{{ asset('css/swipebox.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/swipebox.css') }}">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}
-            <script src="js/jquery.min.js"></script>
+            <script src="{{ asset('js/jquery.min.js') }}"></script>
             <script src="{{ asset('js/jquery.swipebox.js') }}"></script>
+            <script src="{{ asset('js/wow.min.js') }}"></script>
+            <script src="{{ asset('js/move-top.js') }}"></script>
+            <script src="{{ asset('js/easing.js') }}"></script>
+            <script src="{{ asset('js/jquery.swipebox.min.js') }}"></script>
         {% endblock %}
     </body>
 </html>

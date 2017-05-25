@@ -1,29 +1,20 @@
 {% extends 'base.html.twig' %}
 {% block header %}
         <title>Skandinavijos Kurjeris</title>
-        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-        <script src="js/jquery.min.js"></script>
         {#<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />#}
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Skandinavijos kurjeris, pervezimai, svedija, norvegija" />
 
         <!--sriftas-->
-        <link href="css/owl.carousel.css" rel="stylesheet">
 
         <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Raleway:400,800,300,100,500,700,600,900' rel='stylesheet' type='text/css'>
         <!--animacija css-->
-        <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-        <script src="js/wow.min.js"></script>
         <!--animacija css-->
 
         <!--scriptas-->
-        <script type="text/javascript" src="js/move-top.js"></script>
-        <script type="text/javascript" src="js/easing.js"></script>
 
-        <link rel="stylesheet" href="css/swipebox.css">
-        <script src="js/jquery.swipebox.min.js"></script>
 
 {% endblock %}
 
@@ -32,7 +23,7 @@
         <div class="container">
             <div class="header">
                 <div class="logo wow fadeInLeft" data-wow-delay="0.5s">
-                    <a href="index.html"><img src="images/logo2.png"  alt=""/></a>
+                    <a href="index.html"><img src="{{ asset('images/logo2.png') }}"  alt=""/></a>
                 </div>
                 {#<div class="top-menu">#}
                     {#<span class="menu"> </span>#}
@@ -54,7 +45,7 @@
             <div class="brief-text text-center">
                 <h1>APIE MUS</h1>
                 <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
-                    <img src="images/browse.jpg" width="540" height="360" alt=""/>
+                    <img src="{{ asset('images/browse.jpg') }}" width="540" height="360" alt=""/>
                     <div class="brief-grid">
                         <div class="brief-grid-text">
                             <h3>Nuo durų iki durų</h3>
@@ -68,7 +59,7 @@
                 </div>
             </div>
             <div class="col-md-6 brief-grids wow fadeInRight" data-wow-delay="0.5s">
-                <img src="images/browse2.jpg" width="540" height="360" alt=""/>
+                <img src="{{ asset('images/browse2.jpg') }}" width="540" height="360" alt=""/>
                 <div class="brief-grid">
                     <div class="brief-grid-text">
                         <h3>Atvežame prekių iš Lietuvos</h3>
@@ -90,7 +81,7 @@
             </div>
             <div class="kainos-section">
                 <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
-                    <img src="images/kainynas.jpg" alt=""/>
+                    <img src="{{ asset('images/kainynas.jpg') }}" width="540" height="360" alt=""/>
                 </div>
             </div>
         </div>
@@ -141,60 +132,60 @@
             <div class="item text-center guide-sliders">
                 <div class="col-md-4 image-grid">
                     <div class="portfolio-wrapper">
-                        <a href="images/sc1.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc1.JPG"></a>
+                        <a href="{{ asset('images/sc1.JPG') }}" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="{{ asset('images/sc1.JPG') }}"></a>
                     </div>
                 </div>
                 <div class="col-md-4 image-grid">
                     <div class="portfolio-wrapper">
-                        <a href="images/sc2.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc2.JPG"></a>
+                        <a href="{{ asset('images/sc2.JPG') }}" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="{{ asset('images/sc2.JPG') }}"></a>
                     </div>
                 </div>
                 <div class="col-md-4 image-grid">
                     <div class="portfolio-wrapper">
-                        <a href="images/sc3.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc3.JPG"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item text-center guide-sliders">
-                <div class="col-md-4 image-grid">
-                    <div class="portfolio-wrapper">
-                        <a href="images/sc4.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc4.JPG"></a>
-                    </div>
-                </div>
-                <div class="col-md-4 image-grid">
-                    <div class="portfolio-wrapper">
-                        <a href="images/sc5.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc5.JPG"></a>
-                    </div>
-                </div>
-                <div class="col-md-4 image-grid">
-                    <div class="portfolio-wrapper">
-                        <a href="images/sc1.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc1.JPG"></a>
+                        <a href="{{ asset('images/sc3.JPG') }}" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="{{ asset('images/sc3.JPG') }}"></a>
                     </div>
                 </div>
             </div>
             <div class="item text-center guide-sliders">
                 <div class="col-md-4 image-grid">
                     <div class="portfolio-wrapper">
-                        <a href="images/sc5.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc5.JPG"></a>
+                        <a href="{{ asset('images/sc4.JPG') }}" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="{{ asset('images/sc4.JPG') }}"></a>
                     </div>
                 </div>
                 <div class="col-md-4 image-grid">
                     <div class="portfolio-wrapper">
-                        <a href="images/sc4.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc4.JPG"></a>
+                        <a href="{{ asset('images/sc5.JPG') }}" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="{{ asset('images/sc5.JPG') }}"></a>
                     </div>
                 </div>
                 <div class="col-md-4 image-grid">
                     <div class="portfolio-wrapper">
-                        <a href="images/sc2.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc2.JPG"></a>
+                        <a href="{{ asset('images/sc1.JPG') }}" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="{{ asset('images/sc1.JPG') }}"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item text-center guide-sliders">
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="{{ asset('images/sc5.JPG') }}" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="{{ asset('images/sc5.JPG') }}"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="{{ asset('images/sc4.JPG') }}" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="{{ asset('images/sc4.JPG') }}"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 image-grid">
+                    <div class="portfolio-wrapper">
+                        <a href="{{ asset('images/sc2.JPG') }}" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="{{ asset('images/sc2.JPG') }}"></a>
                     </div>
                 </div>
 
@@ -219,19 +210,28 @@
             {{ pagination.getTotalItemCount }}
         </div>
         <table>
-            <tr>
+            <tr id="comments-table-header">
                 {# sorting of properties based on query components #}
-                <th>{{ knp_pagination_sortable(pagination, 'name', 'a.name') }}</th>
-                <th{% if pagination.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Title', 'a.title') }}</th>
-                <th>{{ knp_pagination_sortable(pagination, 'Release', ['a.date', 'a.time']) }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Vardas', 'a.name') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Komentaras', []) }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Veiksmai', []) }}</th>
             </tr>
 
             {# table body #}
             {% for article in pagination %}
-                <tr {% if loop.index is odd %}class="color"{% endif %}>
+                <tr id="comments-table-content" {% if loop.index is odd %}class="color"{% endif %}>
                     <td>{{ article.name }}</td>
                     <td>{{ article.text }}</td>
-
+                    <td>
+                        <ul>
+                            {#<li>#}
+                            {#<a href="{{ path('_show', { 'id': comment.id }) }}">show</a>#}
+                            {#</li>#}
+                            <li>
+                                <a href="{{ path('_edit', { 'id': article.id }) }}">Redaguoti</a>
+                            </li>
+                        </ul>
+                    </td>
                     {#<td>{{ article.date | date('Y-m-d') }}, {{ article.time | date('H:i:s') }}</td>#}
                 </tr>
             {% endfor %}
@@ -264,40 +264,39 @@
         {{ form_end(form) }}
 
 
-        <h1>KOMENTARAI</h1>
 
-        <table>
-            <thead>
-            <tr>
+        {#<table>#}
+            {#<thead>#}
+            {#<tr>#}
 
-                <th>Vardas</th>
-                <th>Komentaras</th>
-                <th>Veiksmai</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for comment in comments %}
-                <tr>
+                {#<th>Vardas</th>#}
+                {#<th>Komentaras</th>#}
+                {#<th>Veiksmai</th>#}
+            {#</tr>#}
+            {#</thead>#}
+            {#<tbody>#}
+            {#{% for comment in comments %}#}
+                {#<tr>#}
                     {#<td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>#}
-                    <td>{{ comment.name }}</td>
-                    <td>{{ comment.text }}</td>
-                    <td>{{ comment.text }}</td>
+                    {#<td>{{ comment.name }}</td>#}
+                    {#<td>{{ comment.text }}</td>#}
+                    {#<td>{{ comment.text }}</td>#}
 
                     {#<td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>#}
-                    <td>
-                        <ul>
+                    {#<td>#}
+                        {#<ul>#}
                             {#<li>#}
                                 {#<a href="{{ path('_show', { 'id': comment.id }) }}">show</a>#}
                             {#</li>#}
-                            <li>
-                                <a href="{{ path('_edit', { 'id': comment.id }) }}">Redaguoti</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+                            {#<li>#}
+                                {#<a href="{{ path('_edit', { 'id': comment.id }) }}">Redaguoti</a>#}
+                            {#</li>#}
+                        {#</ul>#}
+                    {#</td>#}
+                {#</tr>#}
+            {#{% endfor %}#}
+            {#</tbody>#}
+        {#</table>#}
 
         {#<ul>#}
             {#<li>#}
@@ -310,7 +309,7 @@
         <div class="footer">
             <div class="container">
                 <div class="ftr-logo">
-                    <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"><img src="images/logo2.png" alt=""/></a>
+                    <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"><img src="{{ asset('images/logo2.png') }}" alt=""/></a>
                 </div>
                 <div class="copy-right wow bounceInUp" data-wow-delay="0.5s">
                     <p>Copyright &#169; 2017 Skandinavijos Kurjeris . All Rights Reserved.</p>
@@ -334,25 +333,17 @@
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="js/vganimacijos.js"></script>
-
-    <!---->
-
-
     <script>
         $("span.menu").click(function(){
             $(".top-menu ul").slideToggle("slow" , function(){
             });
         });
     </script>
-
-
-    <script src="js/owl.carousel.js"></script>
-
+    <script src="{{ asset('js/owl.carousel.js') }}"></script>
 {% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
-
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('sidebar/style.css') }}">
 {% endblock %}
