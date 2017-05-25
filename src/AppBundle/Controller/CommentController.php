@@ -22,6 +22,22 @@ class CommentController extends Controller
      */
     public function indexAction(Request $request)
     {
+
+        $em    = $this->get('doctrine.orm.entity_manager');
+        $dql   = "SELECT a FROM AppBundle:Comment a";
+        $query = $em->createQuery($dql);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            10/*limit per page*/
+        );
+
+
+
+
+
         $comment = new Comment();
 
         $form = $this->createForm('AppBundle\Form\CommentType', $comment);
@@ -40,6 +56,7 @@ class CommentController extends Controller
         $comments = $em->getRepository('AppBundle:Comment')->findAll();
 
         return $this->render('comment/index.html.twig', array(
+            'pagination' => $pagination,
             'comments' => $comments,
             'comment' => $comment,
             'form' => $form->createView(),
@@ -108,7 +125,7 @@ class CommentController extends Controller
 
         return $this->render('comment/edit.html.twig', array(
             'comment' => $comment,
-            'edit_form' => $editForm->createView(),
+            'form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
