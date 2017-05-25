@@ -1,9 +1,12 @@
 {% extends 'base.html.twig' %}
 {% block header %}
+
         <title>Skandinavijos Survagis</title>
+
+
         <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
         <script src="js/jquery.min.js"></script>
-        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        {#<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />#}
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Skandinavijos kurjeris, pervezimai, svedija, norvegija" />
@@ -17,34 +20,7 @@
         <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
         <script src="js/wow.min.js"></script>
         <!--animacija css-->
-        <script>
-            {#jmiasdjfisdj#}
-            {#jmiasdjfisdj#}
-            {#jmiasdjfisdj#}
-            {#jmiasdjfisdj#}
-            {#jmiasdjfisdj#}
-            {#jmiasdjfisdj#}
-            new WOW().init();
-            jQuery(document).ready(function($) {
-                $(".scroll").click(function(event){
-                    event.preventDefault();
-                    $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-                });
 
-                $(".swipebox").swipebox();
-
-                $("#owl-demo").owlCarousel({
-                    items : 1,
-                    lazyLoad : true,
-                    autoPlay : true,
-                    navigation : false,
-                    navigationText :  false,
-                    pagination : true,
-                });
-
-
-            });
-        </script>
         <!--scriptas-->
         <script type="text/javascript" src="js/move-top.js"></script>
         <script type="text/javascript" src="js/easing.js"></script>
@@ -55,110 +31,103 @@
 {% endblock %}
 
 {% block body %}
+    <div class="banner">
+        <div class="container">
+            <div class="header">
+                <div class="logo wow fadeInLeft" data-wow-delay="0.5s">
+                    <a href="index.html"><img src="images/logo2.png"  alt=""/></a>
+                </div>
+                {#<div class="top-menu">#}
+                    {#<span class="menu"> </span>#}
+                    {#<ul>#}
 
-
-<div class="banner">
-    <div class="container">
-        <div class="header">
-            <div class="logo wow fadeInLeft" data-wow-delay="0.5s">
-                <a href="index.html"><img src="images/logo2.png" alt=""/></a>
+                    {#</ul>#}
+                {#</div>#}
+                <div class="clearfix"> </div>
             </div>
-            <div class="top-menu">
-                <span class="menu"> </span>
-                <ul>
-                    <li><a class="scroll" href="#pagrindins">PAGRINDINS</a></li>
-                    <li><a class="scroll" href="#apiemus">APIE MUS</a></li>
-                    <li><a class="scroll" href="#kainos">KAINININKAS</a></li>
-                    <li><a class="scroll" href="#galerija">GALERIJA</a></li>
-                    <li><a class="scroll" href="#kontaktai">KONTAKTAI</a></li>
-                    <li><a class="scroll" href="#zemelapis">ŽEMĖLAPIS</a></li>
-                </ul>
+
+            <div id="Pagrindinis" class="banner-text wow fadeInUp" data-wow-delay="0.5s">
+
             </div>
-            <div class="clearfix"> </div>
-        </div>
-        <!-- script-for-menu -->
-
-        <div id="Pagrindinis" class="banner-text wow fadeInUp" data-wow-delay="0.5s">
-            <h1>Profesionalios <span> pervežimo </span> <h1>paslaugos</h1></h1>
-
         </div>
     </div>
-</div>
-<div id="apiemus" class="apiemus">
-    <div class="container">
-        <div class="brief-text text-center">
-            <h3>APIE MUS</h3>
-            <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
-                <img src="images/browse.jpg" alt=""/>
+{% include ':include:sidebar.html.twig' %}
+    <div id="apiemus" class="apiemus">
+        <div class="container">
+            <div class="brief-text text-center">
+                <h1>APIE MUS</h1>
+                <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
+                    <img src="images/browse.jpg" width="540" height="360" alt=""/>
+                    <div class="brief-grid">
+                        <div class="brief-grid-text">
+                            <h3>Nuo durų iki durų</h3>
+                            <p>Mūsų įmonė užsiima pervežimu tarp Lietuvos Švedijos bei Norvegijos nuo durų iki durų. Draugiškas
+                            bei savo darbą išmanantis personalas, paims jūsų siuntinį iš taško A ir pristatys jį į tašką B.
+                            Tokiu būdu užtikrindami jūsų siuntos saugumą. Kraustymo paslaugų ir logistikos srityje turime septynerių
+                            metų patirtį.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 brief-grids wow fadeInRight" data-wow-delay="0.5s">
+                <img src="images/browse2.jpg" width="540" height="360" alt=""/>
                 <div class="brief-grid">
                     <div class="brief-grid-text">
-                        <h3>Nuo durų iki durų</h3>
-                        <p>Mūsų įmonė užsiima pervežimu tarp Lietuvos Švedijos bei Norvegijos nuo durų iki durų. </p>
+                        <h3>Atvežame prekių iš Lietuvos</h3>
+                        <p>Teikiame apipirkimo paslaugą, atvežame prekių iš Lietuvos pagal individualius Jūsų poreikius
+                        nuo maisto prekių iki autodalių, viskas priklauso nuo Jūsų fantazijos!</p>
                     </div>
 
                 </div>
             </div>
-        </div>
-        <div class="col-md-6 brief-grids wow fadeInRight" data-wow-delay="0.5s">
-            <img src="images/browse2.jpg" alt=""/>
-            <div class="brief-grid">
-                <div class="brief-grid-text">
-                    <h3>Atvežame prekių iš Lietuvos</h3>
-                    <p>Teikiame apipirkimo bei autodetalių pristatymo paslaugas.</p>
-                </div>
-
-            </div>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-</div>
-<!---->
-<!---->
-
-<!---->
-<div id="kainos" class="container">
-    <div class="container">
-        <div class="Kainininkas-text text-center">
-            <h3>PASLAUGŲ KAINOS</h3>
-
-        </div>
-        <div class="kainos-section">
-            <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
-                <img src="images/kainynas.jpg" alt=""/>
-            </div>
+            <div class="clearfix"> </div>
         </div>
     </div>
-</div>
 
+    <div id="kainos" class="container">
+        <div class="container">
+            <div class="Kainininkas-text text-center">
+                <h1>PASLAUGŲ KAINOS</h1>
 
-<div id="kontaktai" class="container">
-    <div class="container">
-        <div class="brief-text text-center">
-
-            <div class="brief-grid">
-                <div class="brief-grid-text">
-                    <h3>KONTAKTAI</h3>
-                    <p> Tel: +370 688 34343</p>
-                    <p>el paštas: skandinavijoskurjeris@gmail.com</p>
-                    <p>https://facebook.com/skandinavijoskurjeris</p>
-
+            </div>
+            <div class="kainos-section">
+                <div class="col-md-6 brief-grids wow fadeInLeft" data-wow-delay="0.5s">
+                    <img src="images/kainynas.jpg" alt=""/>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!---->
-<!--
-planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau greitu metu turėtų atsirasti
-<div class="video">
+
+<br>
+    <div id="kontaktai" class="container">
+        <div class="container">
+            <div class="brief-text text-center">
+
+                <div class="brief-grid">
+                    <div class="brief-grid-text">
+                        <h1>KONTAKTAI</h1>
+                        <p> Tel: +370 688 34343</p>
+                        <p>el paštas: skandinavijoskurjeris@gmail.com</p>
+                        <p>https://facebook.com/skandinavijoskurjeris</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div id="video">
 	 <div class="container">
 		 <div class="video-text text-center">
-			 <h3>MŪSŲ VIDEO</h3>
+			 <h1>MŪSŲ VIDEO</h1>
 
 		 </div>
 		 <div class="video-play ">
 			 <div class="playing">
-				 <iframe width="500"height="281"src="https://www.youtube.com/reklaminis video"frameborder="0"allowfullscreen> </iframe>
+                 <iframe style="float:right" src="https://www.youtube.com/embed/tVT-8av4ITM" frameborder="0" allowfullscreen></iframe>
 			 </div>
 		 </div>
 	 </div>
@@ -168,10 +137,8 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
 <div id="galerija" class="screenshots">
     <div class="container">
         <div class="screen-text text-center">
-            <h3>GALERIJA</h3>
+            <h1>GALERIJA</h1>
         </div>
-
-
 
         <div id="owl-demo" class="owl-carousel">
             <div class="item text-center guide-sliders">
@@ -203,8 +170,8 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
                 </div>
                 <div class="col-md-4 image-grid">
                     <div class="portfolio-wrapper">
-                        <a href="images/sc5.jpg" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc5.jpg"></a>
+                        <a href="images/sc5.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc5.JPG"></a>
                     </div>
                 </div>
                 <div class="col-md-4 image-grid">
@@ -217,8 +184,8 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
             <div class="item text-center guide-sliders">
                 <div class="col-md-4 image-grid">
                     <div class="portfolio-wrapper">
-                        <a href="images/sc5.jpg" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
-                            <img src="images/sc5.jpg"></a>
+                        <a href="images/sc5.JPG" class="b-link-stripe b-animate-go   swipebox"  title="Image Title">
+                            <img src="images/sc5.JPG"></a>
                     </div>
                 </div>
                 <div class="col-md-4 image-grid">
@@ -233,33 +200,55 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
                             <img src="images/sc2.JPG"></a>
                     </div>
                 </div>
-            </div>
 
-        </div>
+
+                </div>
     </div>
 </div>
 
 <div id="zemelapis" class="container">
     <div class="container">
         <div class="screen-text text-center">
-            <h3>ŽEMĖLAPIS</h3>
+            <h1>ŽEMĖLAPIS</h1>
         </div>
 
-        <div class="ŽEMĖLAPIS">
-            <iframe   width="100%" height="500" align="center" src="https://www.google.com/maps/embed?pb=!1m40!1m12!1m3!1d4054590.3043713947!2d3.8888495591625714!3d60.25055038847491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m25!3e0!4m5!1s0x4616da471047fb4b%3A0xe82562ee3bc08fea!2s%C3%85lesund%2C+Norvegija!3m2!1d62.4722284!2d6.149482!4m5!1s0x463a3549dd29f795%3A0xad7aeb21b80a9259!2sStavangeris%2C+Norvegija!3m2!1d58.9699756!2d5.7331072999999995!4m5!1s0x46416e61f267f039%3A0x7e92605fd3231e9a!2sOslas%2C+Norvegija!3m2!1d59.913868799999996!2d10.7522454!4m5!1s0x4616da471047fb4b%3A0xe82562ee3bc08fea!2s%C3%85lesund%2C+Norvegija!3m2!1d62.4722284!2d6.149482!5e0!3m2!1slt!2slt!4v1492644214371" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div style="text-align: center;">
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m72!1m12!1m3!1d4234827.898901495!2d8.13335101778448!3d58.783992122118306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m57!3e0!4m5!1s0x465f763119640bcb%3A0xa80d27d3679d7766!2sStokholmas%2C+%C5%A0vedija!3m2!1d59.329323499999994!2d18.0685808!4m5!1s0x465e4281455ba9a7%3A0xbc415db6e2654020!2zVsOkc3RlcsOlcw!3m2!1d59.609900499999995!2d16.5448091!4m5!1s0x4667db4479a069a5%3A0x14f914049025c5f9!2sMora!3m2!1d61.004878!2d14.537002999999999!4m5!1s0x46692d8da451f42f%3A0x89fdcd0b2c8b4e41!2sLofsdalen!3m2!1d62.111885699999995!2d13.277505699999999!4m5!1s0x466c64dfc168123f%3A0xb72ef174e7159afe!2zUsO4cm9z!3m2!1d62.5748112!2d11.3841068!4m5!1s0x4616da471047fb4b%3A0xe82562ee3bc08fea!2zw4VsZXN1bmQ!3m2!1d62.4722284!2d6.149482!4m5!1s0x463a3549dd29f795%3A0xad7aeb21b80a9259!2sStavanger!3m2!1d58.9699756!2d5.7331072999999995!4m5!1s0x46416e61f267f039%3A0x7e92605fd3231e9a!2sOslo!3m2!1d59.913868799999996!2d10.7522454!4m3!3m2!1d59.616507199999994!2d16.5928231!4m3!3m2!1d59.3599239!2d18.0869636!5e0!3m2!1slt!2slt!4v1493126718807" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
 
         <br>
 
+        <div class="count">
+            {{ pagination.getTotalItemCount }}
+        </div>
+        <table>
+            <tr>
+                {# sorting of properties based on query components #}
+                <th>{{ knp_pagination_sortable(pagination, 'name', 'a.name') }}</th>
+                <th{% if pagination.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Title', 'a.title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Release', ['a.date', 'a.time']) }}</th>
+            </tr>
 
-        <h1>Comment creation</h1>
+            {# table body #}
+            {% for article in pagination %}
+                <tr {% if loop.index is odd %}class="color"{% endif %}>
+                    <td>{{ article.name }}</td>
+                    <td>{{ article.text }}</td>
+
+                    {#<td>{{ article.date | date('Y-m-d') }}, {{ article.time | date('H:i:s') }}</td>#}
+                </tr>
+            {% endfor %}
+        </table>
+        {# display navigation #}
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
 
 
 
+        <h1 id="komentarai">JŪSŲ KOMENTARAS</h1>
         {{ form_start(form) }}
         {{ form_errors(form) }}
-
-
 
         {# The two following syntaxes are equivalent #}
         <div class="form-group">
@@ -267,7 +256,7 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
             {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
         </div>
 
-        <div class="form-group">
+        <div  class="container">
             {{ form_label(form.text, 'Atsiliepimas') }}
             {{ form_widget(form.text, { 'attr': {'class': 'form-control'} }) }}
         </div>
@@ -278,16 +267,15 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
         {{ form_end(form) }}
 
 
-        <h1>Comments list</h1>
+        <h1>KOMENTARAI</h1>
 
         <table>
             <thead>
             <tr>
 
-                <th>Name</th>
-                <th>Text</th>
-                <th>Created</th>
-                <th>Actions</th>
+                <th>Vardas</th>
+                <th>Komentaras</th>
+                <th>Veiksmai</th>
             </tr>
             </thead>
             <tbody>
@@ -296,6 +284,8 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
                     {#<td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>#}
                     <td>{{ comment.name }}</td>
                     <td>{{ comment.text }}</td>
+                    <td>{{ comment.text }}</td>
+
                     {#<td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>#}
                     <td>
                         <ul>
@@ -303,7 +293,7 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
                                 {#<a href="{{ path('_show', { 'id': comment.id }) }}">show</a>#}
                             {#</li>#}
                             <li>
-                                <a href="{{ path('_edit', { 'id': comment.id }) }}">edit</a>
+                                <a href="{{ path('_edit', { 'id': comment.id }) }}">Redaguoti</a>
                             </li>
                         </ul>
                     </td>
@@ -312,11 +302,11 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
             </tbody>
         </table>
 
-        <ul>
-            <li>
-                <a href="{{ path('_new') }}">Create a new comment</a>
-            </li>
-        </ul>
+        {#<ul>#}
+            {#<li>#}
+                {#<a href="{{ path('_new') }}">Create a new comment</a>#}
+            {#</li>#}
+        {#</ul>#}
 
         <br>
 
@@ -326,44 +316,46 @@ planuojamas filmuoti ir montuoti reklaminis video kolkas jo dar nėra, tačiau g
                     <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"><img src="images/logo2.png" alt=""/></a>
                 </div>
                 <div class="copy-right wow bounceInUp" data-wow-delay="0.5s">
-                    <p>Copyright &#169; 2015 Skandinavijos Kurjeris . All Rights Reserved.</p>
-                    <p>Dizainas: Vilius Gražulis</p>
+                    <p>Copyright &#169; 2017 Skandinavijos Kurjeris . All Rights Reserved.</p>
+                    <p>Vilius Gražulis Šiaulių Valstybinė Kolegija</p>
                 </div>
 
             </div>
         </div>
 
 
-        <a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+        {#<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>#}
 
 
-        <!---->
-        <script type="text/javascript">
-            $(document).ready(function() {
 
-                var defaults = {
-                    containerID: 'toTop', // fading element id
-                    containerHoverID: 'toTopHover', // fading element hover id
-                    scrollSpeed: 1200,
-                    easingType: 'linear'
-                };
 
-                $().UItoTop({ easingType: 'easeOutQuart' });
+
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="js/vganimacijos.js"></script>
+
+    <!---->
+
+
+    <script>
+        $("span.menu").click(function(){
+            $(".top-menu ul").slideToggle("slow" , function(){
             });
-        </script>
+        });
+    </script>
 
 
-        <script>
-            $("span.menu").click(function(){
-                $(".top-menu ul").slideToggle("slow" , function(){
-                });
-            });
-        </script>
+    <script src="js/owl.carousel.js"></script>
 
+{% endblock %}
 
-        <script src="js/owl.carousel.js"></script>
+{% block stylesheets %}
+    {{ parent() }}
 
-
-
-
+    <link rel="stylesheet" href="{{ asset('sidebar/style.css') }}">
 {% endblock %}

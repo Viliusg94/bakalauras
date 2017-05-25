@@ -16,4 +16,6 @@
 /web/bundles/
 .idea/*
 /.idea/*
-
+composer.lock
+node_modules/*
+xdebug.dll

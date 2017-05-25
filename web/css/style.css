@@ -34,9 +34,7 @@ background-size:cover;
 .logo{
 float:left;
 }
-.logo a{
-display:inline-block;
-}
+.logo a{display:inline-block;}
 .top-menu{
   float: right;
     padding-top: 1.2em;
@@ -56,16 +54,9 @@ font-weight:400;
 color:#0199e6;
 }
 .banner-text{
-margin-top:10%;
 text-align:center;
 }
-.banner-text h1{
-font-size:3.2em;
-color:#fff;
-font-weight:500;
-margin-bottom:0.5em;
-font-family: 'Raleway', sans-serif;
-}
+.banner-text h1{font-size:4em;color: #8efe01;font-weight:bold;margin-bottom:0.5em;font-family: 'Raleway', sans-serif;}
 .banner-text h1 span{
   color: #00CFFF;
   font-weight: 700;
@@ -344,9 +335,9 @@ font-size:1.3em;
 /*Pricing table and price blocks*/
  h1 {
 	text-align: center;
-  margin: 1em 0 1em;
-  font-size: 3em;
-  color: #fff;
+	margin: 0.5em 0em;
+	font-size: 3em;
+	color: #2e3e93;
 }
 .price-head h3 {
 	color: #404042;
@@ -1888,6 +1879,11 @@ color: #7f7f7f;
 	}
   }
 @media (max-width: 768px){
+	.logo {
+		width: 400px;
+	}
+
+
 	.top-menu ul li a {
 	  padding: 0.5em 0.5em 0em 0.5em;
 	}
@@ -2084,6 +2080,15 @@ color: #7f7f7f;
 	}
 }
 @media (max-width: 640px){
+	.logo img {
+		background-size: 78%;
+		width: 100px;
+	}
+
+	.header {
+		background-size: 78%;
+		width: 100px;
+	}
 	span.menu:before {
 		content: url(../images/nav-icon.png);
 		cursor: pointer;	
@@ -2277,8 +2282,8 @@ color: #7f7f7f;
 }
 @media (max-width: 480px){
 	.logo img {
-	background-size: 100%;
-	width: 100%;
+	background-size: 78%;
+	width: 100px;
 	}
 	.logo {
 	float: left;
@@ -2492,7 +2497,7 @@ color: #7f7f7f;
 	  margin-top: 10%;
 	}
 	.logo {
-	width: 30%;
+	/* width: 30%; */
 	}
 	.banner {
 	   min-height: 210px;
@@ -2583,7 +2588,9 @@ color: #7f7f7f;
 	margin-top: 0.5em;
 	}
 	.logo img {
-	    width: 70%;
+	    /* width: 62%; */
+	    padding-bottom: 20px;
+	    margin-bottom: 58px;
 	}
 	.top-menu {
 	  padding-top: 5px;
