@@ -1,7 +1,7 @@
 /**
  * Created by Vartotojas1 on 4/20/2017.
  */
-jQuery(document).ready(function($) {
+$(document).ready(function() {
     new WOW().init();
     $(".scroll").click(function(event){
         event.preventDefault();
