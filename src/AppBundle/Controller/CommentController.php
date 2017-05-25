@@ -36,8 +36,6 @@ class CommentController extends Controller
 
 
 
-
-
         $comment = new Comment();
 
         $form = $this->createForm('AppBundle\Form\CommentType', $comment);

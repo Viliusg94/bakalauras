@@ -215,6 +215,34 @@
 
         <br>
 
+        <div class="count">
+            {{ pagination.getTotalItemCount }}
+        </div>
+        <table>
+            <tr>
+                {# sorting of properties based on query components #}
+                <th>{{ knp_pagination_sortable(pagination, 'name', 'a.name') }}</th>
+                <th{% if pagination.isSorted('a.Title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Title', 'a.title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'Release', ['a.date', 'a.time']) }}</th>
+            </tr>
+
+            {# table body #}
+            {% for article in pagination %}
+                <tr {% if loop.index is odd %}class="color"{% endif %}>
+                    <td>{{ article.name }}</td>
+                    <td>{{ article.text }}</td>
+
+                    {#<td>{{ article.date | date('Y-m-d') }}, {{ article.time | date('H:i:s') }}</td>#}
+                </tr>
+            {% endfor %}
+        </table>
+        {# display navigation #}
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+
+
+
         <h1 id="komentarai">JŪSŲ KOMENTARAS</h1>
         {{ form_start(form) }}
         {{ form_errors(form) }}
@@ -253,6 +281,8 @@
                     {#<td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>#}
                     <td>{{ comment.name }}</td>
                     <td>{{ comment.text }}</td>
+                    <td>{{ comment.text }}</td>
+
                     {#<td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>#}
                     <td>
                         <ul>
