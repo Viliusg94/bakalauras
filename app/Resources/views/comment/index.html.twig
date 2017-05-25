@@ -209,6 +209,33 @@
         <div class="count">
             {{ pagination.getTotalItemCount }}
         </div>
+
+
+        <h1 id="komentarai">JŪSŲ KOMENTARAS</h1>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+        {# The two following syntaxes are equivalent #}
+        <div class="form-group">
+            {{ form_label(form.name, 'Jūsų vardas') }}
+            {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+
+        <div  class="container">
+            {{ form_label(form.text, 'Atsiliepimas') }}
+            {{ form_widget(form.text, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+
+        <input type="submit" value="Komentuoti" />
+
+        {{ form_end(form) }}
+        <br>
+
+
+
+
+        <h1 id="komentarai-lentele">KOMENTARAI</h1>
+
         <table>
             <tr id="comments-table-header">
                 {# sorting of properties based on query components #}
@@ -237,74 +264,15 @@
             {% endfor %}
         </table>
         {# display navigation #}
-        <div class="navigation">
-            {{ knp_pagination_render(pagination) }}
+        <div class="row">
+            <div class="navigation col-xs-4 col-xs-offset-4 col-sm-10 col-sm-offset-1  col-md-offset-3">
+                {{ knp_pagination_render(pagination) }}
+            </div>
         </div>
 
 
 
-        <h1 id="komentarai">JŪSŲ KOMENTARAS</h1>
-        {{ form_start(form) }}
-        {{ form_errors(form) }}
 
-        {# The two following syntaxes are equivalent #}
-        <div class="form-group">
-            {{ form_label(form.name, 'Jūsų vardas') }}
-            {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
-        </div>
-
-        <div  class="container">
-            {{ form_label(form.text, 'Atsiliepimas') }}
-            {{ form_widget(form.text, { 'attr': {'class': 'form-control'} }) }}
-        </div>
-
-
-        <input type="submit" value="Komentuoti" />
-
-        {{ form_end(form) }}
-
-
-
-        {#<table>#}
-            {#<thead>#}
-            {#<tr>#}
-
-                {#<th>Vardas</th>#}
-                {#<th>Komentaras</th>#}
-                {#<th>Veiksmai</th>#}
-            {#</tr>#}
-            {#</thead>#}
-            {#<tbody>#}
-            {#{% for comment in comments %}#}
-                {#<tr>#}
-                    {#<td><a href="{{ path('_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>#}
-                    {#<td>{{ comment.name }}</td>#}
-                    {#<td>{{ comment.text }}</td>#}
-                    {#<td>{{ comment.text }}</td>#}
-
-                    {#<td>{% if comment.created %}{{ comment.created|date('Y-m-d H:i:s') }}{% endif %}</td>#}
-                    {#<td>#}
-                        {#<ul>#}
-                            {#<li>#}
-                                {#<a href="{{ path('_show', { 'id': comment.id }) }}">show</a>#}
-                            {#</li>#}
-                            {#<li>#}
-                                {#<a href="{{ path('_edit', { 'id': comment.id }) }}">Redaguoti</a>#}
-                            {#</li>#}
-                        {#</ul>#}
-                    {#</td>#}
-                {#</tr>#}
-            {#{% endfor %}#}
-            {#</tbody>#}
-        {#</table>#}
-
-        {#<ul>#}
-            {#<li>#}
-                {#<a href="{{ path('_new') }}">Create a new comment</a>#}
-            {#</li>#}
-        {#</ul>#}
-
-        <br>
 
         <div class="footer">
             <div class="container">
@@ -320,16 +288,10 @@
         </div>
 
 
+
+
         {#<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>#}
-
-
-
-
-
-
 {% endblock %}
-
-
 
 {% block javascripts %}
     {{ parent() }}
