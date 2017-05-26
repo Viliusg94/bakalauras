@@ -22,7 +22,6 @@ class CommentController extends Controller
      */
     public function indexAction(Request $request)
     {
-
         $em    = $this->get('doctrine.orm.entity_manager');
         $dql   = "SELECT a FROM AppBundle:Comment a ORDER BY a.created DESC ";
         $query = $em->createQuery($dql);
@@ -33,8 +32,6 @@ class CommentController extends Controller
             $request->query->getInt('page', 1)/*page number*/,
             10/*limit per page*/
         );
-
-
 
         $comment = new Comment();
 
@@ -147,6 +144,25 @@ class CommentController extends Controller
 
         return $this->redirectToRoute('_index');
     }
+
+
+    /**
+     * Deletes a comment entity.
+     *
+     * @Route("/deleteComment/{id}", name="_deletenf")
+     */
+    public function deleteNoFormAction(Request $request, Comment $comment)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($comment);
+        $em->flush();
+        $this->addFlash('success', 'Komentaras pašalintas');
+
+        return $this->redirectToRoute('_index', ['_fragment' => 'komentarai-lentele']);
+    }
+
+
+
 
     /**
      * Creates a form to delete a comment entity.

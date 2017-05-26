@@ -238,7 +238,13 @@
 
 
         <h1 id="komentarai-lentele">KOMENTARAI</h1>
-
+        {% if app.session.flashBag.has('success') %}
+            <div class="alert alert-success">
+                {% for msg in app.session.flashBag.get('success') %}
+                    {{ msg }}
+                {% endfor %}
+            </div>
+        {% endif %}
         <table>
             <tr id="comments-table-header">
                 {# sorting of properties based on query components #}
@@ -254,9 +260,12 @@
                     <td>{{ article.text }}</td>
                     <td>
                         <ul>
-                            {#<li>#}
-                            {#<a href="{{ path('_show', { 'id': comment.id }) }}">show</a>#}
-                            {#</li>#}
+                            <li>
+                                <a href="javascript:void(0)" onclick="if(confirm('Ar tikrai norite trinti komentarą?')){window.location='{{ path('_deletenf', { 'id': article.id }) }}';}">
+                                    Trinti
+                                </a>
+                            </li>
+
                             <li>
                                 <a href="{{ path('_edit', { 'id': article.id }) }}">Redaguoti</a>
                             </li>
