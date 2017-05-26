@@ -51,11 +51,11 @@ class CommentController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $comments = $em->getRepository('AppBundle:Comment')->findAll();
+        $client_comments = $em->getRepository('AppBundle:Comment')->findAllClientComments($ip);
 
         return $this->render('comment/index.html.twig', array(
             'pagination' => $pagination,
-            'comments' => $comments,
+            'comments' => $client_comments,
             'comment' => $comment,
             'form' => $form->createView(),
         ));

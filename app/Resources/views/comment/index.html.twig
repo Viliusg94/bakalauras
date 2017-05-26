@@ -256,6 +256,9 @@
                 <tr id="comments-table-content" {% if loop.index is odd %}class="color"{% endif %}>
                     <td>{{ article.name }}</td>
                     <td>{{ article.text }}</td>
+                    {#<h4>{{ client_ip() }}</h4>#}
+
+                    {% if compare_ip(article.ip) %}
                     <td>
                         <ul>
                             <li>
@@ -269,6 +272,7 @@
                             </li>
                         </ul>
                     </td>
+                    {% endif %}
                     {#<td>{{ article.date | date('Y-m-d') }}, {{ article.time | date('H:i:s') }}</td>#}
                 </tr>
             {% endfor %}

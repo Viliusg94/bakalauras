@@ -7,3 +7,15 @@ services:
     #service_name:
     #    class: AppBundle\Directory\ClassName
     #    arguments: ['@another_service_name', 'plain_value', '%parameter_name%']
+    twig.extensions:
+        class: AppBundle\Twig\TwigExtensions
+        tags:
+            - { name: twig.extension }
+        arguments:
+            - '@app.current_user_data_service'
+    app.current_user_data_service:
+        class: AppBundle\Service\CurrentUserDataService
+        arguments:
+          - '@request_stack'
+
+

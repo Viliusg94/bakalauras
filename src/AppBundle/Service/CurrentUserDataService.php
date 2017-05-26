@@ -8,13 +8,9 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\DBAL\Types\OriginType;
-use AppBundle\Entity\User;
-use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpFoundation\RequestStack;
-use AppBundle\Entity\Comment;
 
-class ActivityService
+class CurrentUserDataService
 {
     /**
      * @var EntityManager

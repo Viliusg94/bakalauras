@@ -10,4 +10,13 @@ namespace AppBundle\Repository;
  */
 class CommentRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function findAllClientComments($ip)
+    {
+        return $this->createQueryBuilder('l')
+            ->where(':ip = l.ip')
+            ->setParameter('ip', $ip)
+            ->getQuery()
+            ->getArrayResult();
+    }
 }

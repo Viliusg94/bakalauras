@@ -1,9 +1,7 @@
 <?php
 namespace AppBundle\Twig;
 
-use AppBundle\GlobalConstants;
 use AppBundle\Service\CurrentUserDataService;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
 
 /**
  * Created by PhpStorm.
@@ -14,7 +12,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
 class TwigExtensions extends \Twig_Extension
 {
     /**
-     * @var TokenStorage
+     * @var CurrentUserDataService
      */
     protected $currentUserDataService;
 
@@ -26,50 +24,16 @@ class TwigExtensions extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction('profile_picture', array($this, 'getProfilePicture')),
-            new \Twig_SimpleFunction('profile_email', array($this, 'getProfileEmail')),
-            new \Twig_SimpleFunction('profile_name', array($this, 'getProfileName')),
-            new \Twig_SimpleFunction('profile_id', array($this, 'getProfileId'))
+            new \Twig_SimpleFunction('compare_ip', array($this, 'compareIp'))
         );
     }
 
-    private function getUser()
+    public function compareIp($articleIp)
     {
-        return $this->currentUserDataService->getUser();
+        dump($articleIp);
+        dump($this->currentUserDataService->getIp());
+        if ($articleIp === $this->currentUserDataService->getIp()) return 1;
+        return 0;
     }
 
-    public function getProfileEmail()
-    {
-        return $this->getUser()->getEmail();
-    }
-
-    public function getProfilePicture()
-    {
-        $profilePic = $this->getUser()->getProfilePicture();
-
-        if (substr($profilePic, 0, 4) === 'http') {
-            return $profilePic;
-        }
-
-        if (!file_exists(substr($profilePic, 0, 1))) {
-            return GlobalConstants::PROFILE_IMAGE_DEFAULT;
-        }
-
-        return $profilePic;
-    }
-
-    public function getProfileName()
-    {
-        return $this->getUser()->getName();
-    }
-
-    public function getProfileId()
-    {
-        return $this->getUser()->getId();
-    }
-
-    public function getName()
-    {
-        return 'TwigExtensions';
-    }
 }
