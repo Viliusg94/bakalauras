@@ -24,7 +24,7 @@ class CommentController extends Controller
     {
 
         $em    = $this->get('doctrine.orm.entity_manager');
-        $dql   = "SELECT a FROM AppBundle:Comment a";
+        $dql   = "SELECT a FROM AppBundle:Comment a ORDER BY a.created DESC ";
         $query = $em->createQuery($dql);
 
         $paginator  = $this->get('knp_paginator');
