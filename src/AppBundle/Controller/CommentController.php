@@ -118,7 +118,7 @@ class CommentController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('_edit', array('id' => $comment->getId()));
+            return $this->redirectToRoute('_index', ['_fragment' => 'komentarai-lentele']);
         }
 
         return $this->render('comment/edit.html.twig', array(
