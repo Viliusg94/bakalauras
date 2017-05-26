@@ -46,7 +46,7 @@ class CommentController extends Controller
             $em->persist($comment);
             $em->flush();
 
-            return $this->redirectToRoute('_index');
+            return $this->redirectToRoute('_index', ['_fragment' => 'komentarai-lentele']);
         }
 
         $em = $this->getDoctrine()->getManager();
