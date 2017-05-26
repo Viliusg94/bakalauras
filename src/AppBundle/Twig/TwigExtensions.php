@@ -30,8 +30,8 @@ class TwigExtensions extends \Twig_Extension
 
     public function compareIp($articleIp)
     {
-        dump($articleIp);
-        dump($this->currentUserDataService->getIp());
+        //dump($articleIp);
+        //dump($this->currentUserDataService->getIp());
         if ($articleIp === $this->currentUserDataService->getIp()) return 1;
         return 0;
     }
