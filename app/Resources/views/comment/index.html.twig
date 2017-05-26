@@ -248,31 +248,30 @@
                 {# sorting of properties based on query components #}
                 <th>{{ knp_pagination_sortable(pagination, 'Vardas', 'a.name') }}</th>
                 <th>{{ knp_pagination_sortable(pagination, 'Komentaras', []) }}</th>
-                <th>{{ knp_pagination_sortable(pagination, 'Veiksmai', []) }}</th>
             </tr>
 
             {# table body #}
             {% for article in pagination %}
                 <tr id="comments-table-content" {% if loop.index is odd %}class="color"{% endif %}>
                     <td>{{ article.name }}</td>
-                    <td>{{ article.text }}</td>
-                    {#<h4>{{ client_ip() }}</h4>#}
-
-                    {% if compare_ip(article.ip) %}
                     <td>
-                        <ul>
-                            <li>
-                                <a href="javascript:void(0)" onclick="if(confirm('Ar tikrai norite trinti komentarą?')){window.location='{{ path('_deletenf', { 'id': article.id }) }}';}">
+			<p style="float:left">
+			{{ article.text }}                    {#<h4>{{ client_ip() }}</h4>#}
+			</p>
+                    {% if compare_ip(article.ip) %}
+                        <ul style="margin-top: 10px;margin-bottom: 0px; float:right;">
+                            <li style="display: inline; margin-right: 20px;">
+                                <a style="color:blue" href="javascript:void(0)" onclick="if(confirm('Ar tikrai norite trinti komentarą?')){window.location='{{ path('_deletenf', { 'id': article.id }) }}';}">
                                     Trinti
                                 </a>
                             </li>
 
-                            <li>
-                                <a href="{{ path('_edit', { 'id': article.id }) }}">Redaguoti</a>
+                            <li style="display: inline; margin-right: 20px;">
+                                <a style="color:blue" href="{{ path('_edit', { 'id': article.id }) }}">Redaguoti</a>
                             </li>
                         </ul>
-                    </td>
                     {% endif %}
+</td>
                     {#<td>{{ article.date | date('Y-m-d') }}, {{ article.time | date('H:i:s') }}</td>#}
                 </tr>
             {% endfor %}
