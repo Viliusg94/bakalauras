@@ -1710,11 +1710,7 @@ p.est span{
 }
 /*-- //single --*/
 /*----*/
-.footer{
-background:#050e12;
-padding:2em 0;
-text-align:center;
-}
+.footer{background: #111155;padding:2em 0;text-align:center;}
 .footer a img{
 display:inline-block
 }
@@ -2727,4 +2723,3 @@ color: #7f7f7f;
 #comments-table-header th a {
     color: white;
 }
-
