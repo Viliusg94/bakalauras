@@ -1,38 +1,48 @@
 {% extends 'base.html.twig' %}
 {% block header %}
-    <title>Skandinavijos Kurjeris</title>
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <script src="js/jquery.min.js"></script>
-    {#<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />#}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Skandinavijos kurjeris, pervezimai, svedija, norvegija" />
-
-    <!--sriftas-->
-    <link href="css/owl.carousel.css" rel="stylesheet">
-
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,800,300,100,500,700,600,900' rel='stylesheet' type='text/css'>
-    <!--animacija css-->
-    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-    <script src="js/wow.min.js"></script>
-    <!--animacija css-->
-
-    <!--scriptas-->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-
-    <link rel="stylesheet" href="css/swipebox.css">
-    <script src="js/jquery.swipebox.min.js"></script>
-
+    {{ parent() }}
 {% endblock %}
 {% block body %}
     <h1>KOMENTARŲ REDAGAVIMAS</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
+    <h1 id="komentarai-lentele">KOMENTARAI</h1>
+
+    <table>
+        <tr id="comments-table-header">
+            {# sorting of properties based on query components #}
+            <th>{{ knp_pagination_sortable(pagination, 'Vardas', 'a.name') }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Komentaras', []) }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Veiksmai', []) }}</th>
+        </tr>
+
+        {# table body #}
+        {% for article in pagination %}
+            <tr id="comments-table-content" {% if loop.index is odd %}class="color"{% endif %}>
+                <td>{{ article.name }}</td>
+                <td>{{ article.text }}</td>
+                <td>
+                    <ul>
+                        {#<li>#}
+                        {#<a href="{{ path('_show', { 'id': comment.id }) }}">show</a>#}
+                        {#</li>#}
+                        <li>
+                            <a href="{{ path('_edit', { 'id': article.id }) }}">Redaguoti</a>
+                        </li>
+                    </ul>
+                </td>
+                {#<td>{{ article.date | date('Y-m-d') }}, {{ article.time | date('H:i:s') }}</td>#}
+            </tr>
+        {% endfor %}
+    </table>
+
+
+
+
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
         <input type="submit" value="Redaguoti" />
-    {{ form_end(edit_form) }}
+    {{ form_end(form) }}
 
     <ul>
         <li>
