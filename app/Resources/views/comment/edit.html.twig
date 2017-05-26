@@ -3,55 +3,36 @@
     {{ parent() }}
 {% endblock %}
 {% block body %}
-    <h1>KOMENTARŲ REDAGAVIMAS</h1>
+    <a class="btn btn-default" href="{{ path('_index') }}#komentarai-lentele"><--Grįžti</a>
 
-    <h1 id="komentarai-lentele">KOMENTARAI</h1>
-
-    <table>
-        <tr id="comments-table-header">
-            {# sorting of properties based on query components #}
-            <th>{{ knp_pagination_sortable(pagination, 'Vardas', 'a.name') }}</th>
-            <th>{{ knp_pagination_sortable(pagination, 'Komentaras', []) }}</th>
-            <th>{{ knp_pagination_sortable(pagination, 'Veiksmai', []) }}</th>
-        </tr>
-
-        {# table body #}
-        {% for article in pagination %}
-            <tr id="comments-table-content" {% if loop.index is odd %}class="color"{% endif %}>
-                <td>{{ article.name }}</td>
-                <td>{{ article.text }}</td>
-                <td>
-                    <ul>
-                        {#<li>#}
-                        {#<a href="{{ path('_show', { 'id': comment.id }) }}">show</a>#}
-                        {#</li>#}
-                        <li>
-                            <a href="{{ path('_edit', { 'id': article.id }) }}">Redaguoti</a>
-                        </li>
-                    </ul>
-                </td>
-                {#<td>{{ article.date | date('Y-m-d') }}, {{ article.time | date('H:i:s') }}</td>#}
-            </tr>
-        {% endfor %}
-    </table>
-
-
-
-
+    <h1 id="komentaras">JŪSŲ KOMENTARAS</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Redaguoti" />
+
+    <div class="form-group">
+        {{ form_label(form.name, 'Jūsų vardas') }}
+        {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+    </div>
+
+    <div  class="form-group">
+        {{ form_label(form.text, 'Atsiliepimas') }}
+        {{ form_widget(form.text, { 'attr': {'class': 'form-control'} }) }}
+    </div>
+
+    {{ form_widget(form) }}
+        <button type="submit" class="btn btn-default  col-xs-2 col-xs-offset-5">Patvirtinti</button>
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('_index') }}">Grįžti</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Ištrinti">
+                <input  class="btn btn-danger col-xs-2 col-xs-offset-5" type="submit"  value="Ištrinti">
             {{ form_end(delete_form) }}
         </li>
     </ul>
+
+
+
 {% endblock %}
