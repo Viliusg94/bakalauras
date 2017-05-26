@@ -36,6 +36,14 @@ class Comment
     private $text;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="ip", type="string", nullable=true)
+     */
+    private $ip;
+
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="created", type="datetime")
@@ -126,6 +134,22 @@ class Comment
     public function getCreated()
     {
         return $this->created;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIp()
+    {
+        return $this->ip;
+    }
+
+    /**
+     * @param string $ip
+     */
+    public function setIp($ip)
+    {
+        $this->ip = $ip;
     }
 }
 

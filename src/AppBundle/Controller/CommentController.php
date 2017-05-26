@@ -5,7 +5,8 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Comment;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Comment controller.
@@ -34,6 +35,8 @@ class CommentController extends Controller
         );
 
         $comment = new Comment();
+        $ip = $request->getClientIp();
+        $comment->setIp($ip);
 
         $form = $this->createForm('AppBundle\Form\CommentType', $comment);
         $form->handleRequest($request);
@@ -66,7 +69,11 @@ class CommentController extends Controller
      */
     public function newAction(Request $request)
     {
+
         $comment = new Comment();
+        $ip = $request->getClientIp();
+        $comment->setIp($ip);
+
         $form = $this->createForm('AppBundle\Form\CommentType', $comment);
         $form->handleRequest($request);
 
