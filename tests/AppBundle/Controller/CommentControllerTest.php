@@ -32,7 +32,7 @@ class CommentControllerTest extends WebTestCase
         $result = $crawler
             ->filterXpath('//img')
             ->extract(array('src'));
-        $target_domain = 'http://localhost:2222/';
+        $target_domain = 'http://localhost:7777/';
 
         foreach ($result as $image) {
             $file = file_get_contents($target_domain . $image);
